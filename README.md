@@ -6,7 +6,7 @@ Automated test suite for the TaxCreditCo automation challenge survey application
 
 This project uses Playwright with TypeScript, following best practices including Page Object Model (POM) pattern, test fixtures, and centralized configuration.
 
-## 📋 Prerequisites
+## Prerequisites
 
 Before you begin, ensure you have the following installed on your system:
 
@@ -16,7 +16,7 @@ Before you begin, ensure you have the following installed on your system:
   - To check your npm version: `npm --version`
 - **Git** (for cloning the repository)
 
-## 🚀 Installation
+## Installation
 
 Follow these steps to set up the project:
 
@@ -60,7 +60,7 @@ This will download:
 
 **Note**: The browser installation may take a few minutes depending on your internet connection.
 
-## 🧪 Running Tests
+## Running Tests
 
 The project includes several npm scripts for running tests in different modes:
 
@@ -152,7 +152,7 @@ After running tests, view the HTML report:
 npx playwright show-report
 ```
 
-## 📝 Available Scripts
+## Available Scripts
 
 | Script | Description |
 |--------|-------------|
@@ -167,132 +167,4 @@ npx playwright show-report
 | `npm run test:headed:trace` | Run tests with visible browser and trace |
 | `npm run codegen` | Generate tests using Playwright Codegen |
 
-## 📁 Project Structure
 
-```
-taxcreditco-automation-challenge/
-├── tests/
-│   ├── automation-challenge.pom.spec.ts  # Main test file
-│   ├── config/
-│   │   └── constants.ts                  # Centralized constants (URLs, timeouts, text content)
-│   ├── fixtures/
-│   │   └── pages.ts                      # Playwright fixtures for page objects
-│   ├── helpers/
-│   │   ├── test-data.ts                  # Test data factory
-│   │   └── utils.ts                      # Utility functions
-│   └── pages/
-│       ├── BasicInfoPage.ts              # Page Object for basic info form
-│       ├── YesNoPage.ts                  # Page Object for Yes/No questions
-│       └── ConfirmNamePage.ts            # Page Object for name confirmation
-├── playwright.config.ts                  # Playwright configuration
-├── package.json                          # Project dependencies and scripts
-└── README.md                             # This file
-```
-
-## 🔧 Configuration
-
-### Playwright Configuration
-
-Key settings in `playwright.config.ts`:
-
-- **Test Timeout**: 60 seconds per test
-- **Retries**: 1 retry locally, 2 retries in CI
-- **Browsers**: Chromium, Firefox, WebKit
-- **Screenshots**: Captured on failure
-- **Videos**: Recorded on first retry
-- **Traces**: Captured on first retry
-- **Base URL**: https://uat-survey.taxcreditco.com
-
-### Test Configuration
-
-- Tests use **Page Object Model (POM)** pattern
-- **Fixtures** provide page objects to tests
-- **Test Data Factory** generates test data
-- **Constants** are centralized for easy maintenance
-
-## 🏗️ Architecture
-
-This project follows best practices for test automation:
-
-1. **Page Object Model (POM)**: Each page has its own class with methods and locators
-2. **Fixtures**: Custom fixtures extend Playwright's base test
-3. **Test Data Factory**: Centralized test data generation
-4. **Constants**: All configuration values in one place
-5. **Test Steps**: Tests are organized with clear steps and expected behaviors
-6. **TypeScript**: Full type safety throughout the codebase
-
-## 📊 Test Report
-
-After running tests, you can view the HTML report:
-
-```bash
-npx playwright show-report
-```
-
-The report includes:
-- Test execution results
-- Screenshots of failures
-- Videos of failed tests
-- Trace files for detailed debugging
-
-## 🐛 Troubleshooting
-
-### Browser Installation Issues
-
-If you encounter issues installing browsers:
-
-1. Try installing with system dependencies:
-   ```bash
-   npx playwright install --with-deps
-   ```
-
-2. On Linux, you may need to install additional system libraries
-3. Check [Playwright installation guide](https://playwright.dev/docs/intro#installation) for platform-specific instructions
-
-### Test Failures
-
-If tests fail:
-
-1. Check your internet connection (tests access external URLs)
-2. Verify the target application is accessible
-3. Run tests with trace enabled for detailed debugging:
-   ```bash
-   npm run test:chromium:trace
-   ```
-4. View the HTML report for screenshots and error details
-
-### TypeScript Errors
-
-If you see TypeScript errors:
-
-1. Ensure all dependencies are installed: `npm install`
-2. Check that you're using Node.js 18+
-3. Verify TypeScript can find type definitions
-
-## 🔍 Code Generation
-
-Generate new tests using Playwright's code generation tool:
-
-```bash
-npm run codegen
-```
-
-This opens a browser where you can interact with the application, and Playwright will generate test code for your actions.
-
-## 📚 Additional Resources
-
-- [Playwright Documentation](https://playwright.dev/)
-- [Playwright TypeScript Guide](https://playwright.dev/docs/intro)
-- [Page Object Model Pattern](https://playwright.dev/docs/pom)
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Ensure all tests pass
-5. Submit a pull request
-
-## 📄 License
-
-This project is licensed under the ISC License.
