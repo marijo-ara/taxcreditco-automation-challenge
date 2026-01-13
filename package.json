@@ -1,0 +1,34 @@
+{
+  "name": "taxcreditco-automation-challenge",
+  "version": "1.0.0",
+  "description": "Automates the scenario provided for:\r https://uat-survey.taxcreditco.com/automation-challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test",
+    "test:trace": "playwright test --trace on",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:chromium:trace": "playwright test --project=chromium --trace on",
+    "test:debug": "playwright test --debug",
+    "test:debug:trace": "playwright test --debug --trace on",
+    "test:headed": "playwright test --headed",
+    "test:headed:trace": "playwright test --headed --trace on",
+    "codegen": "playwright codegen"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marijo-ara/taxcreditco-automation-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/marijo-ara/taxcreditco-automation-challenge/issues"
+  },
+  "homepage": "https://github.com/marijo-ara/taxcreditco-automation-challenge#readme",
+  "devDependencies": {
+    "@playwright/test": "^1.57.0",
+    "@types/node": "^25.0.6"
+  }
+}
